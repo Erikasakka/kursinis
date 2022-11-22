@@ -1,6 +1,6 @@
 <?php
 
-require_once './config/defines.inc.php';
+require_once '../config/defines.inc.php';
 require_once  './db/PDODb.php';
 
 if (file_exists(_ROOT_DIR_ . '/config/settings.inc.php')) {
