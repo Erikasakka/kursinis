@@ -1,7 +1,11 @@
 <?php
 
-require_once '../config/defines.inc.php';
-require_once  './db/PDODb.php';
+if (!defined('_ROOT_DIR_')) {
+    define('_ROOT_DIR_', realpath(dirname(__FILE__) . '/..'));
+}
+
+require_once _ROOT_DIR_ . '/config/defines.inc.php';
+require_once  _ROOT_DIR_ . '/db/PDODb.php';
 
 if (file_exists(_ROOT_DIR_ . '/config/settings.inc.php')) {
     require_once _ROOT_DIR_ . '/config/settings.inc.php';
@@ -30,3 +34,4 @@ class DB
         return new static();
     }
 }
+?>
